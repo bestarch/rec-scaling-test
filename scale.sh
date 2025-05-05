@@ -12,13 +12,6 @@ echo "DB_ID: $DB_ID"
 echo "TARGET_TPS: $TARGET_TPS"
 echo "POLL_SECONDS: $POLL_SECONDS"
 
-# Check if SUBSCRIPTION_ID and DB_ID are provided
-# if [ -z "$SUBS_ID" ] || [ -z "$DB_ID" ]; then
-#   echo "Usage --> $0 SUBSCRIPTION_ID DB_ID TARGET_TPS POLL_SECONDS"
-#   echo "Example --> $0 2712295 13140775 10000 15"
-#   exit 1
-# fi
-
 # Check if SUBSCRIPTION_ID, DB_ID and TARGET_TPS are provided
 if ! [[ "$SUBS_ID" =~ ^[0-9]+$ ]] || ! [[ "$DB_ID" =~ ^[0-9]+$ ]] || ! [[ "$TARGET_TPS" =~ ^[0-9]+$ ]]; then
   echo "SUBSCRIPTION_ID, DB_ID and TARGET_TPS must have valid values."
